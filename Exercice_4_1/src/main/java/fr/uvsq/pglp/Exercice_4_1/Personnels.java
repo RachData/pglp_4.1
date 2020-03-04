@@ -1,10 +1,12 @@
+package fr.uvsq.pglp.Exercice_4_1;
+
 import java.sql.Date;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Personnels {
+public class Personnels implements PersonelsInter {
 	/**
 	 * parametre obligatoire
 	 */
@@ -71,4 +73,12 @@ public class Personnels {
 	
 	
 
+}
+
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+		
+	}
+	
 }

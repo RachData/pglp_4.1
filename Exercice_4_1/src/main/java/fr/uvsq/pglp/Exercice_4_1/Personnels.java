@@ -12,6 +12,7 @@ public class Personnels implements PersonelsInter {
 	 */
 	private final String nom;
 	private final String prenom;
+	private final int Id;//new
 	
 	/**
 	 * parametre optionel
@@ -26,7 +27,7 @@ public class Personnels implements PersonelsInter {
 		 */
 		private final String nom;
 		private final String prenom;
-
+		private final int Id;//new
 		/**
 		 * parametre optionel
 		 */
@@ -69,16 +70,16 @@ public class Personnels implements PersonelsInter {
 		this.dateDeNaissance=builder.dateDeNaissance;
 		this.numTel=builder.numTel;
 		
-
-	
-	
-
-}
-
+	}
+	/**
+	 * Affichage des informations du personnel
+	 */
 	@Override
 	public void print() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("l'identifiant du personnel :"+this.Id+" "+this.nom+" "+this.prenom);
 	}
 	
+	
+
 }

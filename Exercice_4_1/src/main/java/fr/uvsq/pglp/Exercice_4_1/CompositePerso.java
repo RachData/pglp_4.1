@@ -1,11 +1,17 @@
 package fr.uvsq.pglp.Exercice_4_1;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class CompositePerso implements PersonelsInter {
 	
 	private int IDgrp;
 	private ArrayList<PersonelsInter> grpPerso=new ArrayList<PersonelsInter>();
+	
+	public ArrayList<PersonelsInter> gettab(){
+		return (ArrayList<PersonelsInter>) Collections.unmodifiableList(this.grpPerso);
+		
+	}
 	
 	public CompositePerso(int IDgrp) {
 		this.IDgrp=IDgrp;

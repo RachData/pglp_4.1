@@ -34,5 +34,9 @@ public class CompositePerso implements PersonelsInter {
 		this.grpPerso.remove(perso);
 	}
 	
+	public String toString(){
+		  String str = "\t je suis un composite ID ==>> " + this.IDgrp;
+		  return str;
+	}
 
 }

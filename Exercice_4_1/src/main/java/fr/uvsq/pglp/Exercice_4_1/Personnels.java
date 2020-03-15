@@ -81,5 +81,10 @@ public class Personnels implements PersonelsInter {
 	}
 	
 	
+	public String toString(){
+		  String str = "\t je suis un Personnel ID ==>> " + this.Id;
+		  return str;
+	}
+	
 
 }

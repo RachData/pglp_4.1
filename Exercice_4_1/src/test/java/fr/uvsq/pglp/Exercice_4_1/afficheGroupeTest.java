@@ -29,8 +29,8 @@ public class afficheGroupeTest {
 		grp1.add(perso1);
 		grp1.add(grp2);
 		
-		grp2.add(perso3);
 		grp2.add(grp3);
+		grp2.add(perso3);
 		
 		grp3.add(perso4);
 		grp3.add(perso2);
@@ -40,7 +40,7 @@ public class afficheGroupeTest {
 		while (grouptIter.HasNext()) {
             //String nextValue = iterator.next();
 			PersonelsInter nextValue=grouptIter.Next();
-            System.out.println("The next value with Iterator is: " + nextValue);
+            System.out.println("The next value with Iterator is: " + nextValue.toString());
         }
  
        

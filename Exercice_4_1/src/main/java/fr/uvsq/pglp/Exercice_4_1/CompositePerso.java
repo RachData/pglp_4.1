@@ -6,7 +6,7 @@ import java.util.Collections;
 public class CompositePerso implements PersonelsInter {
 	
 	private int IDgrp;
-	private ArrayList<PersonelsInter> grpPerso=new ArrayList<PersonelsInter>();
+	public ArrayList<PersonelsInter> grpPerso=new ArrayList<PersonelsInter>();
 	
 	public ArrayList<PersonelsInter> gettab(){
 		return (ArrayList<PersonelsInter>) Collections.unmodifiableList(this.grpPerso);

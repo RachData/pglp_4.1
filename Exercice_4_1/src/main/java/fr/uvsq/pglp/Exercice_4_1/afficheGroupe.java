@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 
 public class afficheGroupe {
-	public ArrayList<PersonelsInter> grp;
+	public ArrayList<PersonelsInter> grp=new ArrayList<PersonelsInter>();
 	
-	public afficheGroupe (PersonelsInter grp) {
-		this.grp.add(grp);
+	public afficheGroupe (PersonelsInter root) {
+		this.grp.add(root);
 	}
 	
 	/**
@@ -16,7 +16,7 @@ public class afficheGroupe {
 	 *
 	 */
 	private class groupIterator implements Iterator{
-		int index;
+		int index=0;
 		
 		
 		public groupIterator() {
@@ -25,12 +25,16 @@ public class afficheGroupe {
 				if(grp.get(verifier) instanceof CompositePerso) {
 					CompositePerso test=(CompositePerso)grp.get(verifier);
 					int i=0;
-					while(i<test.gettab().size()) {
-						grp.add(test.gettab().get(verifier));
+					
+					while(i<test.grpPerso.size()) {
+						grp.add(test.grpPerso.get(i));
+						
 						i++;
 					}
-				verifier++;
+					
+				
 				}
+				verifier++;
 			}
 		}
 		
@@ -38,7 +42,7 @@ public class afficheGroupe {
 		 * verifirie s'il y'a des elements dans l'arr
 		 */
 		@Override
-		public boolean hasNext() {
+		public boolean HasNext() {
 			if(index<grp.size())
 				return true;
 			// TODO Auto-generated method stub
@@ -47,8 +51,11 @@ public class afficheGroupe {
 
 		@Override
 		public PersonelsInter Next() {
-			if(this.hasNext())
-				return grp.get(index);
+			if(this.HasNext()) {
+				index++;
+				return grp.get(index-1);
+			}
+				
 			return null;
 		}
 		
